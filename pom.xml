@@ -8,9 +8,39 @@
 	<packaging>jar</packaging>
 
 	<name>gfsreader</name>
-
+	<description>Library for accessing GFS's public OPeNDAP server</description>
+	<url>https://github.com/Predictia/gfs-reader</url>
+	<organization>
+		<name>Predictia</name>
+		<url>http://www.predictia.es</url>
+	</organization>
+		<issueManagement>
+		<url>https://github.com/Predictia/gfs-reader/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	<scm>
+		<url>https://github.com/Predictia/gfs-reader</url>
+		<connection>scm:git:git://github.com/Predictia/gfs-reader.git</connection>
+		<developerConnection>scm:git:git@github.com:Predictia/gfs-reader.git</developerConnection>
+	</scm>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<email>max@predictia.es</email>
+			<name>Max Tuni</name>
+			<url>https://github.com/kktuax</url>
+			<id>kktuax</id>
+		</developer>
+	</developers>
+	
 	<properties>
 		<netcdf.version>4.4.1</netcdf.version>
+		<github.global.server>github</github.global.server>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -93,6 +123,43 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<message>Creating site for ${project.version}</message>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>
