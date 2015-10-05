@@ -1,0 +1,24 @@
+-classpath
+'/home/kktuax/workspaces/roadcast/gfsreader/target/classes:/home/kktuax/.m2/repository/edu/ucar/udunits/4.4.1/udunits-4.4.1.jar:/home/kktuax/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/kktuax/.m2/repository/edu/ucar/netcdf4/4.4.1/netcdf4-4.4.1.jar:/home/kktuax/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/kktuax/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:/home/kktuax/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/home/kktuax/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/kktuax/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/home/kktuax/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar:/home/kktuax/.m2/repository/net/sf/ehcache/ehcache-core/2.6.10/ehcache-core-2.6.10.jar:/home/kktuax/.m2/repository/joda-time/joda-time/2.5/joda-time-2.5.jar:/home/kktuax/.m2/repository/edu/ucar/opendap/4.4.1/opendap-4.4.1.jar:/home/kktuax/.m2/repository/edu/ucar/cdm/4.4.1/cdm-4.4.1.jar:/home/kktuax/.m2/repository/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar:/home/kktuax/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/kktuax/workspaces/roadcast/gfsreader/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2015 <a href="http://www.predictia.es">Predictia</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/home/kktuax/workspaces/roadcast/gfsreader/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'gfsreader 0.0.1-SNAPSHOT API'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' '/home/kktuax/workspaces/roadcast/gfsreader/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'gfsreader 0.0.1-SNAPSHOT API'
