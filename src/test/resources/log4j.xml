@@ -14,6 +14,14 @@
         <level value="DEBUG"/>
     </logger>
 
+	<logger name="ucar.nc2">
+        <level value="FATAL"/>
+    </logger>
+    
+    <logger name="opendap">
+        <level value="FATAL"/>
+    </logger>
+    
     <root>
         <level value="WARN"/>
         <appender-ref ref="CONSOLE"/>

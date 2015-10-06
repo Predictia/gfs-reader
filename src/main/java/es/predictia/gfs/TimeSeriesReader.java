@@ -67,16 +67,12 @@ public class TimeSeriesReader {
 	 */
 	static Map<DateTime, Double> readTimeSeries(String location, GridName gridName, Double lon, Double lat, int zIndex) throws IOException{
 		Map<DateTime, Double> data = new TreeMap<DateTime, Double>();
-		
 		GridDataset dataset = null;
 		try{
 			Stopwatch sw = Stopwatch.createStarted();
 			dataset = GridDataset.open(location);
-			
 			GeoGrid grid = dataset.findGridByName(gridName.name());
-			GridCoordSystem xyAxis = grid.getCoordinateSystem();
-			CoordinateAxis zAxis = xyAxis.getVerticalAxis();
-			
+			GridCoordSystem xyAxis = grid.getCoordinateSystem();			
 			int[] yxIndex = xyAxis.findXYindexFromLatLon(lat,lon,null);
 			if(yxIndex.length==2){
 				CoordinateAxis tAxis = xyAxis.getTimeAxis();
@@ -85,29 +81,11 @@ public class TimeSeriesReader {
 					dates = ((CoordinateAxis1DTime) tAxis).getCalendarDates();
 				}
 				Array tValues = tAxis.read();
-				Long zValuesLength = 1l;
-				if(zAxis != null){
-					Array zValues = zAxis.read();
-					zValuesLength = zValues.getSize();
-				}
-				for(int z=0;z<zValuesLength;z++){
-					if(zIndex != z) continue;
-					for(int t=0;t<tValues.getSize();t++){
-						if(t >= dates.size()){
-							continue;
-						}
-						Double val = Double.NaN;
-						if(yxIndex[0]>=0 && yxIndex[1]>=0){
-							Array dathum = grid.readDataSlice(t,z,yxIndex[1],yxIndex[0]);
-							if(dathum != null){
-								if(dathum.getSize()>0){
-									val = dathum.getDouble(0);
-								}
-							}
-						}
-						DateTime time = new DateTime(dates.get(t).getMillis(), DateTimeZone.UTC); 
-						data.put(time,Double.isNaN(val) ? null : val);
-					}
+				Array dathum = grid.readDataSlice(-1,zIndex, yxIndex[1], yxIndex[0]); // t < 0: fetch all times
+				for(int t=0; t<tValues.getSize(); t++){
+					Double val = dathum.getDouble(t);
+					DateTime time = new DateTime(dates.get(t).getMillis(), DateTimeZone.UTC); 
+					data.put(time, val);
 				}
 			}
 			LOGGER.debug("Temporal series from location {} read in {}", location, sw);
