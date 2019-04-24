@@ -21,8 +21,8 @@
 	</issueManagement>
 	<scm>
 		<url>https://github.com/Predictia/gfs-reader</url>
-		<connection>scm:git:git://github.com/Predictia/gfs-reader.git</connection>
-		<developerConnection>scm:git:git@github.com:Predictia/gfs-reader.git</developerConnection>
+		<connection>scm:git:https://github.com/Predictia/gfs-reader.git</connection>
+		<developerConnection>scm:git:https://github.com/Predictia/gfs-reader.git</developerConnection>
 	</scm>
 	<licenses>
 		<license>
