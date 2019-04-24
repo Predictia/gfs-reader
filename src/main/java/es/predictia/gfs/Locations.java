@@ -23,7 +23,7 @@ class Locations {
 
 	private Locations(){}
 	
-	private static final String BASE_LOCATION = "http://nomads.ncep.noaa.gov:9090/dods/gfs_0p25/gfs${date}/gfs_0p25_${hour}z";
+	private static final String BASE_LOCATION = "http://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs${date}/gfs_0p25_${hour}z";
 
 	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormat.forPattern("yyyyMMdd").withZone(DateTimeZone.UTC);
 	private static final DateTimeFormatter HOUR_FORMATTER = DateTimeFormat.forPattern("HH").withZone(DateTimeZone.UTC);
