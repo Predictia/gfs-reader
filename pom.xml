@@ -3,7 +3,7 @@
 
 	<groupId>es.predictia</groupId>
 	<artifactId>gfsreader</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>gfsreader</name>
@@ -21,7 +21,7 @@
 		<url>https://github.com/Predictia/gfs-reader</url>
 		<connection>scm:git:https://github.com/Predictia/gfs-reader.git</connection>
 		<developerConnection>scm:git:https://github.com/Predictia/gfs-reader.git</developerConnection>
-	  <tag>gfsreader-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<licenses>
 		<license>
