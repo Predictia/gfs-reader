@@ -1,11 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>es.predictia</groupId>
 	<artifactId>gfsreader</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 
 	<name>gfsreader</name>
@@ -23,7 +21,8 @@
 		<url>https://github.com/Predictia/gfs-reader</url>
 		<connection>scm:git:git://github.com/Predictia/gfs-reader.git</connection>
 		<developerConnection>scm:git:git@github.com:Predictia/gfs-reader.git</developerConnection>
-	</scm>
+	  <tag>gfsreader-0.0.2</tag>
+  </scm>
 	<licenses>
 		<license>
 			<name>MIT License</name>
